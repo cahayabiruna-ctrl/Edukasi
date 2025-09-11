@@ -58,6 +58,32 @@
 
 .card h1, .card h2, .card h3 {
   text-shadow: 0 0 8px rgba(255,255,255,0.6);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.slide.active .card h1,
+.slide.active .card h2,
+.slide.active .card h3 {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.emoji-bounce {
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 #header-info {
@@ -80,8 +106,8 @@
 <body>  <div id="presentation"><!-- Slide 1 -->
 <div class="slide active">
   <div id="header-info">Dipersembahkan oleh:<br><strong>DVTeam Naga Persada</strong></div>
-  <div class="card-content">
-    <h1 class="text-4xl md:text-6xl font-black glow mb-6">✨ Kebebasan Finansial Bukan Mimpi</h1>
+  <div class="card-content card">
+    <h1 class="text-4xl md:text-6xl font-black glow mb-6"><span class="emoji-bounce">✨</span> Kebebasan Finansial Bukan Mimpi</h1>
     <p class="text-xl md:text-2xl">Tapi hasil dari <span class="text-amber-300 font-bold glow">EDUKASI</span>. Bersama DVTeam NP kita wujudkan impian itu.</p>
   </div>
 </div>
@@ -89,8 +115,8 @@
 <!-- Slide 2 -->
 <div class="slide">
   <div id="header-info">Dipersembahkan oleh:<br><strong>DVTeam Naga Persada</strong></div>
-  <div class="card-content">
-    <h2 class="text-3xl md:text-5xl font-bold text-cyan-300 glow">❓ Mengapa EDUKASI?</h2>
+  <div class="card-content card">
+    <h2 class="text-3xl md:text-5xl font-bold text-cyan-300 glow"><span class="emoji-bounce">❓</span> Mengapa EDUKASI?</h2>
     <p class="mt-6 text-xl md:text-2xl">Dunia berubah cepat: digitalisasi, AI, persaingan global. Tanpa edukasi & upgrade diri, kita akan tertinggal.</p>
     <p class="mt-4 text-xl md:text-2xl bg-black bg-opacity-25 p-4 rounded-lg shadow-lg">EDUKASI di DVTeam NP bukan teori kosong, tapi <strong>lima kunci aktivitas nyata</strong> yang bisa langsung dipraktikkan.</p>
   </div>
@@ -99,8 +125,8 @@
 <!-- Slide 3 (E) -->
 <div class="slide">
   <div id="header-info">Dipersembahkan oleh:<br><strong>DVTeam Naga Persada</strong></div>
-  <div class="card-content">
-    <h2 class="text-6xl font-black text-amber-300 glow">🚀 E</h2>
+  <div class="card-content card">
+    <h2 class="text-6xl font-black text-amber-300 glow"><span class="emoji-bounce">🚀</span> E</h2>
     <h3 class="text-3xl font-bold mt-2">Eksekusi</h3>
     <p class="mt-4 text-lg md:text-xl">Ilmu tanpa tindakan = nol besar. Eksekusi artinya berani mulai <strong>sekarang</strong>, bukan nanti.</p>
     <p class="mt-3 text-base md:text-lg italic">🔑 Realitas: Banyak orang tahu tentang peluang & DVTeam, tapi hanya sedikit yang benar-benar melakukan eksekusi.</p>
@@ -110,8 +136,8 @@
 <!-- Slide 4 (D) -->
 <div class="slide">
   <div id="header-info">Dipersembahkan oleh:<br><strong>DVTeam Naga Persada</strong></div>
-  <div class="card-content">
-    <h2 class="text-6xl font-black text-cyan-300 glow">👥 D</h2>
+  <div class="card-content card">
+    <h2 class="text-6xl font-black text-cyan-300 glow"><span class="emoji-bounce">👥</span> D</h2>
     <h3 class="text-3xl font-bold mt-2">Duplikasi</h3>
     <p class="mt-4 text-lg md:text-xl">Sukses bukan tentang Anda sendiri, tapi bagaimana tim ikut tumbuh dan berkembang.</p>
     <p class="mt-3 text-base md:text-lg italic">🔑 Di era digital: sistem yang mudah diduplikasi mempercepat pertumbuhan eksponensial.</p>
@@ -121,8 +147,8 @@
 <!-- Slide 5 (K) -->
 <div class="slide">
   <div id="header-info">Dipersembahkan oleh:<br><strong>DVTeam Naga Persada</strong></div>
-  <div class="card-content">
-    <h2 class="text-6xl font-black text-amber-300 glow">📈 K</h2>
+  <div class="card-content card">
+    <h2 class="text-6xl font-black text-amber-300 glow"><span class="emoji-bounce">📈</span> K</h2>
     <h3 class="text-3xl font-bold mt-2">Konsistensi</h3>
     <p class="mt-4 text-lg md:text-xl">Konsistensi lebih penting daripada semangat sesaat. Inilah kunci yang membuat hasil nyata jangka panjang.</p>
     <p class="mt-3 text-base md:text-lg italic">🔑 Konsistensi adalah pembeda utama antara mereka yang berhasil dan yang gagal.</p>
@@ -132,8 +158,8 @@
 <!-- Slide 6 (A) -->
 <div class="slide">
   <div id="header-info">Dipersembahkan oleh:<br><strong>DVTeam Naga Persada</strong></div>
-  <div class="card-content">
-    <h2 class="text-6xl font-black text-cyan-300 glow">🔄 A</h2>
+  <div class="card-content card">
+    <h2 class="text-6xl font-black text-cyan-300 glow"><span class="emoji-bounce">🔄</span> A</h2>
     <h3 class="text-3xl font-bold mt-2">Adaptasi</h3>
     <p class="mt-4 text-lg md:text-xl">Hidup selalu berubah, pasar selalu bergerak. Yang bertahan adalah mereka yang cepat beradaptasi.</p>
     <p class="mt-3 text-base md:text-lg italic">🔑 Contoh: Bisnis yang gagal beradaptasi akan kalah oleh kompetitor yang lebih cepat merespons perubahan.</p>
@@ -143,8 +169,8 @@
 <!-- Slide 7 (S) -->
 <div class="slide">
   <div id="header-info">Dipersembahkan oleh:<br><strong>DVTeam Naga Persada</strong></div>
-  <div class="card-content">
-    <h2 class="text-6xl font-black text-amber-300 glow">🤝 S</h2>
+  <div class="card-content card">
+    <h2 class="text-6xl font-black text-amber-300 glow"><span class="emoji-bounce">🤝</span> S</h2>
     <h3 class="text-3xl font-bold mt-2">Sinergi</h3>
     <p class="mt-4 text-lg md:text-xl">Sinergi adalah kerjasama yang menghasilkan kekuatan lebih besar dari sekadar penjumlahan individu.</p>
     <p class="mt-3 text-base md:text-lg italic">🔑 Networking seringkali lebih berharga daripada sekadar skill individu.</p>
@@ -154,8 +180,8 @@
 <!-- Slide 8 Ringkasan -->
 <div class="slide">
   <div id="header-info">Dipersembahkan oleh:<br><strong>DVTeam Naga Persada</strong></div>
-  <div class="card-content">
-    <h2 class="text-3xl md:text-5xl font-bold glow mb-6">📚 EDUKASI = Jalan Menuju Kebebasan Finansial</h2>
+  <div class="card-content card">
+    <h2 class="text-3xl md:text-5xl font-bold glow mb-6"><span class="emoji-bounce">📚</span> EDUKASI = Jalan Menuju Kebebasan Finansial</h2>
     <ul class="space-y-3 text-left text-lg md:text-xl">
       <li><span class="text-amber-300 font-black">E</span> → Eksekusi: Bertindak nyata.</li>
       <li><span class="text-cyan-300 font-black">D</span> → Duplikasi: Berkembang bersama.</li>
@@ -170,8 +196,8 @@
 <!-- Slide 9 Penutup -->
 <div class="slide">
   <div id="header-info">Dipersembahkan oleh:<br><strong>DVTeam Naga Persada</strong></div>
-  <div class="card-content">
-    <h1 class="text-4xl md:text-6xl font-black glow">🔥 Saatnya Bertindak, Saatnya Berubah!</h1>
+  <div class="card-content card">
+    <h1 class="text-4xl md:text-6xl font-black glow"><span class="emoji-bounce">🔥</span> Saatnya Bertindak, Saatnya Berubah!</h1>
     <p class="mt-6 text-xl md:text-2xl">Jangan tunggu sempurna. Mulailah sekarang dengan <span class="text-amber-300 font-bold glow">EDUKASI</span> bersama DVTeam.</p>
   </div>
 </div>
